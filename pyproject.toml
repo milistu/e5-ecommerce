@@ -1,20 +1,20 @@
 [tool.poetry]
-name = "stuembed"
+name = "e5-ecommerce"
 version = "0.1.0"
-description = "Fine-Tune text Embedding model."
+description = "Embedding model for E-commerce"
 authors = ["milistu <studen.m98@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-transformers = "^4.37.1"
-datasets = "^2.16.1"
-torch = "^2.1.2"
-sentence-transformers = "^2.2.2"
+transformers = "4.46.2"
+datasets = "2.21.0"
+torch = "^2.5.1"
+sentence-transformers = "^2.7.0"
 
 [tool.poetry.group.dev.dependencies]
-jupyter = "^1.0.0"
+jupyter = "^1.1.1"
 
 [build-system]
 requires = ["poetry-core"]
