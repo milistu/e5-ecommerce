@@ -1,4 +1,5 @@
 import io
+from pathlib import Path
 from typing import Optional
 
 import pandas as pd
@@ -14,6 +15,9 @@ def upload_file(
     repo_type: str = "dataset",
     columns: Optional[list[str]] = None,
 ) -> None:
+    if Path(path_in_repo).suffix != ".parquet":
+        raise ValueError(f'"{path_in_repo}" path must be a parquet file')
+
     file_buffer = io.BytesIO()
     if columns is None:
         df.to_parquet(file_buffer)
